@@ -18,7 +18,8 @@
   <description>Username/password auth with JWT + PQC demo endpoints</description>
 
   <properties>
-    <java.version>21</java.version>
+    <!-- Use 17 so Maven works with a typical JDK install; set to 21 if you install JDK 21+ -->
+    <java.version>17</java.version>
     <bouncycastle.version>1.78.1</bouncycastle.version>
   </properties>
 
