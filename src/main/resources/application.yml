@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+app:
+  user:
+    username: rocket
+    # Demo-only: you can put either an Argon2 hash (starts with "$argon2")
+    # or a plain password (it will be Argon2-hashed at runtime).
+    passwordHash: "89p13"
+
