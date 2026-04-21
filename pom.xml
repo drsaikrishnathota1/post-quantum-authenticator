@@ -7,7 +7,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.3.3</version>
+    <version>3.4.0</version>
     <relativePath/>
   </parent>
 
@@ -39,17 +39,17 @@
       <artifactId>spring-security-crypto</artifactId>
     </dependency>
 
-    <!-- PQC demo (Dilithium/Kyber, etc.) -->
-    <dependency>
-      <groupId>org.bouncycastle</groupId>
-      <artifactId>bcprov-jdk18on</artifactId>
-      <version>${bouncycastle.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.bouncycastle</groupId>
-      <artifactId>bcprov-ext-jdk18on</artifactId>
-      <version>${bouncycastle.version}</version>
-    </dependency>
+     <!-- PQC demo (Dilithium/Kyber, etc.) -->
+     <dependency>
+       <groupId>org.bouncycastle</groupId>
+       <artifactId>bcprov-jdk18on</artifactId>
+       <version>${bouncycastle.version}</version>
+     </dependency>
+     <dependency>
+       <groupId>org.bouncycastle</groupId>
+       <artifactId>bcprov-ext-jdk18on</artifactId>
+       <version>${bouncycastle.version}</version>
+     </dependency>
 
     <dependency>
       <groupId>org.springframework.boot</groupId>
