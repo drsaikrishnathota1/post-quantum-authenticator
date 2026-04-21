@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.4.0</version>
+    <relativePath/>
+  </parent>
+
+  <groupId>com.example</groupId>
+  <artifactId>post-quantum-authenticator</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>post-quantum-authenticator</name>
+  <description>Username/password auth with JWT + PQC demo endpoints</description>
+
+  <properties>
+    <!-- Use 17 so Maven works with a typical JDK install; set to 21 if you install JDK 21+ -->
+    <java.version>17</java.version>
+    <bouncycastle.version>1.78.1</bouncycastle.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-validation</artifactId>
+    </dependency>
+
+    <!-- Argon2 password hashing (no full Spring Security web stack needed) -->
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-crypto</artifactId>
+    </dependency>
+
+     <!-- PQC demo (Dilithium/Kyber, etc.) -->
+     <dependency>
+       <groupId>org.bouncycastle</groupId>
+       <artifactId>bcprov-jdk18on</artifactId>
+       <version>${bouncycastle.version}</version>
+     </dependency>
+     <dependency>
+       <groupId>org.bouncycastle</groupId>
+       <artifactId>bcprov-ext-jdk18on</artifactId>
+       <version>${bouncycastle.version}</version>
+     </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+</project>
+

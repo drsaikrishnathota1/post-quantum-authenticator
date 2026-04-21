@@ -1,0 +1,16 @@
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+release.properties
+
+# Local Maven repo override (if used)
+.m2repo/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+.DS_Store
